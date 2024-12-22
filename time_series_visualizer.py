@@ -12,8 +12,8 @@ df = df[(df['value'] >= df['value'].quantile(0.025)) & (df['value'] <= df['value
 
 def draw_line_plot():
     # Draw line plot
-    fig, ax = plt.subplots(figsize=(12, 6))
-    ax.plot(df.index, df['value'], color='r', linewidth=1)
+    fig, ax = plt.subplots(figsize=(18, 6))
+    ax.plot(df.index, df['value'], color='darkred', linewidth=1)
     ax.set_title('Daily freeCodeCamp Forum Page Views 5/2016-12/2019')
     ax.set_xlabel('Date')
     ax.set_ylabel('Page Views')
@@ -56,7 +56,7 @@ def draw_box_plot():
     axes[0].set_xlabel('Year')
     axes[0].set_ylabel('Page Views')
 
-    sns.boxplot(x='month', y='value', data=df_box, ax=axes[1])
+    sns.boxplot(x='month', y='value', data=df_box, order=['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'], ax=axes[1])
     axes[1].set_title('Month-wise Box Plot (Seasonality)')
     axes[1].set_xlabel('Month')
     axes[1].set_ylabel('Page Views')
