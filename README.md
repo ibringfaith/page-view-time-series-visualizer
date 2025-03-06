@@ -34,7 +34,9 @@ cd page-view-time-series-visualizer
 
 ## Example Output
 Here’s an example of the generated visualizations:
-![Example Visualization](example.png)
+![Example Bar Plot](bar_plot.png)
+![Example Box Plot](box_plot.png)
+![Example Line Plot](line_plot.png)
 
 ## Testing
 To ensure that the visualizer functions correctly, run the unit tests:
